@@ -29,7 +29,8 @@
 	<script type="text/javascript">
 		let text=document.getElementById("text");
 		let textInfo=document.getElementById(`textinfo`);
-		let clr;
+		let clr='black';
+		let algn= 'center';
 		function transformUpperCase(){
 			text.value=text.value.toUpperCase();
 		}
@@ -50,7 +51,8 @@
 			clr=prompt(("Enter your fav color:").toLowerCase())
 			text.style.color=clr;
 		}
-		function testUnderline() {
+		function textUnderline() {
+			// text.style.textDecoration=`underline 2px solid`
 			text.style.textDecoration=`underline 2px solid ${clr}`
 		}
 		function updateInfo() {
@@ -62,6 +64,10 @@
 		}
 		function textJustify() {
 			text.style.textAlign='Justify';
+			// algn=prompt(("Enter desired aligning  :").toLowerCase())
+			// text.style.color=algn;
+			text.style.textAlign = algn;
+			// object.style.justifyContent = "flex-start|flex-end|center|space-between|space-around|initial|inherit"
 		}
 
 
